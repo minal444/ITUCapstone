@@ -1,0 +1,15 @@
+--------------------------------------Error Message Start------------------------------------------------------------
+Could not find stored procedure 'Sp_GetSecurityQuestions'.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 166
+   at FinancePortfolioAPI.Controllers.UserController.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 94
+--------------------------------------Error Message Ends-----------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Could not find stored procedure 'Sp_GetSecurityQuestions'.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 166
+   at FinancePortfolioAPI.Controllers.UserController.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 94
+--------------------------------------Error Message Ends-----------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Could not find stored procedure 'Sp_GetSecurityQuestions'.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 166
+   at FinancePortfolioAPI.Controllers.UserController.GetSecurityQuestions() in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 94
+--------------------------------------Error Message Ends-----------------------------------------------------------

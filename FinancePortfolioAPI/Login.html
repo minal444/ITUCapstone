@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Validate User</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            alert('1');
+            var data = {
+                "UserId": 0,
+                "UserName": "patel",
+                "Password": "patel"
+            };
+
+
+            alert('2');
+            alert(data);
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost/FinancePortfolioAPI/api/User/ValidateUser',
+                contentType: 'application/json; charset=utf-8',
+                //dataType: "text",
+                async: false,
+                data: JSON.stringify(data),
+                success: function (data) {
+                    alert(data.UserId),
+                    alert("Saved Successfully");
+                },
+                error: function (textStatus, errorThrown) {
+                    alert(textStatus);
+                    alert(errorThrown);
+                    alert("Error please try again");
+                }
+            })
+        });
+
+
+    </script>
+</head>
+<body>
+    this is test
+</body>
+</html>

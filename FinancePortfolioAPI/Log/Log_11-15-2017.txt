@@ -1,0 +1,24 @@
+--------------------------------------------------------------------------------------------------
+   at FinancePortfolioAPI.BusinessLayer.UserBL.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 71
+   at FinancePortfolioAPI.Controllers.UserController.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 39
+--------------------------------------------------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Unable to cast object of type 'System.Byte[]' to type 'System.String'.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.GetUserDetailsByUserName(String userName) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 180
+   at FinancePortfolioAPI.Controllers.UserController.GetUserDetailsByUserName(String id) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 117
+--------------------------------------Error Message Ends-----------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Salt is not at least eight bytes.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 71
+   at FinancePortfolioAPI.Controllers.UserController.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 39
+--------------------------------------Error Message Ends-----------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Failed to convert parameter value from a String to a Byte[].
+   at FinancePortfolioAPI.BusinessLayer.UserBL.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 71
+   at FinancePortfolioAPI.Controllers.UserController.RegisterUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 39
+--------------------------------------Error Message Ends-----------------------------------------------------------
+--------------------------------------Error Message Start------------------------------------------------------------
+Invalid length for a Base-64 char array or string.
+   at FinancePortfolioAPI.BusinessLayer.UserBL.ValidateUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\BusinessLayer\UserBL.cs:line 23
+   at FinancePortfolioAPI.Controllers.UserController.ValidateUser(User userEntity) in c:\Development\ITU\Capstone\FinancePortfolioAPI\FinancePortfolioAPI\Controllers\UserController.cs:line 22
+--------------------------------------Error Message Ends-----------------------------------------------------------

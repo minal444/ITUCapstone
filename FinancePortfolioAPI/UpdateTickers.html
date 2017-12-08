@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //$("#postform").submit(function (e) {
+               // e.preventDefault();
+            var apiurl = "/api/User/UpdateTickerSymbols";
+            var data = [
+                    { UserId: 7, TickerSymbolId: 0, TickerSymbolName: "BLUE", Active: 1 },
+                    { UserId: 7, TickerSymbolId: 0, TickerSymbolName: "MSFT", Active: 1 },
+                    
+                ]
+
+                $.ajax({
+                    url: apiurl,
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(data),
+                    success: function (d) {
+                        alert("Saved Successfully");
+                    },
+                    error: function () {
+                        alert("Error please try again");
+                    }
+                });
+            //});
+        });
+
+    </script>
+</head>
+<body>
+    <div>update tickers</div>
+</body>
+</html>

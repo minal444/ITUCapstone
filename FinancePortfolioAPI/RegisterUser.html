@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Register User</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var data = {
+            
+            UserName: 'minalpatel',
+            Password: 'minalpatel',
+            FirstName: 'minalpatel',
+            LastName: 'minalpatel',
+            DOB: '11/11/2011',
+            EmailAddress: 'minalpatel@address.com',
+            Address: 'minalpatel',
+            QuestionId1: 1,
+            Answer1: 'Answer 1',
+            QuestionId2: '2',
+            Answer2: 'Answer 2',
+            UserId: 0,
+            UserTickerSymbols: [
+                //{ TickerSymbolId: 1, TickerSymbolName: "GOOG", Active: 1 },
+                //{ TickerSymbolId: 2, TickerSymbolName: "FB", Active: 1 },
+                //{ TickerSymbolId: 3, TickerSymbolName: "Microsoft Corporation", Active: 1 },
+                //{ TickerSymbolId: 4, TickerSymbolName: "INFY", Active: 1 }
+                ]
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/api/User/RegisterUser',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function (data) {
+            alert(data);
+            self.result("Done!");
+        }).fail(showError);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
