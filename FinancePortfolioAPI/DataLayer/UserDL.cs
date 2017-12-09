@@ -287,11 +287,11 @@ namespace FinancePortfolioAPI.DataLayer
                             user.UserId = readerUser.GetInt32(readerUser.GetOrdinal("UserId"));
                             user.UserName = readerUser.GetString(readerUser.GetOrdinal("UserName"));
                             user.Password = Crypto.Decrypt(readerUser.GetString(readerUser.GetOrdinal("Password")));
-                            //user.FirstName = readerUser.GetString(readerUser.GetOrdinal("FirstName"));
-                            //user.LastName = readerUser.GetString(readerUser.GetOrdinal("LastName"));
-                            //user.DOB = readerUser.GetDateTime(readerUser.GetOrdinal("DOB"));
-                            //user.EmailAddress = readerUser.GetString(readerUser.GetOrdinal("EmailAddress"));
-                            //user.Address= readerUser.GetString(readerUser.GetOrdinal("Address"));
+                            user.FirstName = readerUser.GetString(readerUser.GetOrdinal("FirstName"));
+                            user.LastName = readerUser.GetString(readerUser.GetOrdinal("LastName"));
+                            user.DOB = readerUser.GetDateTime(readerUser.GetOrdinal("DOB"));
+                            user.EmailAddress = readerUser.GetString(readerUser.GetOrdinal("EmailAddress"));
+                            user.Address= readerUser.GetString(readerUser.GetOrdinal("Address"));
                             user.QuestionId1 = readerUser.GetInt32(readerUser.GetOrdinal("QuestionId1"));
                             user.Question1 = readerUser.GetString(readerUser.GetOrdinal("Question1"));
                             user.Answer1 = readerUser.GetString(readerUser.GetOrdinal("Answer1")); 
