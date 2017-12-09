@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //$("#postform").submit(function (e) {
+               // e.preventDefault();
+            var apiurl = "http://localhost:9193/api/User/UpdateUserDetails";
+            var data = {
+
+                UserName: 'minalpatel',
+                Password: 'minalpatelnew',
+                FirstName: 'minalpatelnew',
+                LastName: 'minalpatelnew',
+                DOB: '11/17/2011',
+                EmailAddress: 'minalpatelnew@address.com',
+                Address: 'minalpatelnew',
+                UserId: 9,
+                UserTickerSymbols: [
+                    //{ TickerSymbolId: 1, TickerSymbolName: "GOOG", Active: 1 },
+                    //{ TickerSymbolId: 2, TickerSymbolName: "FB", Active: 1 },
+                    //{ TickerSymbolId: 3, TickerSymbolName: "Microsoft Corporation", Active: 1 },
+                    //{ TickerSymbolId: 4, TickerSymbolName: "INFY", Active: 1 }
+                ]
+            };
+
+                $.ajax({
+                    url: apiurl,
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(data),
+                    success: function (d) {
+                        alert("Saved Successfully");
+                    },
+                    error: function () {
+                        alert("Error please try again");
+                    }
+                });
+            //});
+        });
+
+    </script>
+</head>
+<body>
+    <div>update user profile</div>
+</body>
+</html>
