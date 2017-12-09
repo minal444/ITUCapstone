@@ -311,6 +311,52 @@ namespace FinancePortfolioAPI.DataLayer
             }
         }
 
+        public static int UpdateUserDetails(User userEntity)
+        {
+            try
+            {
+                SqlParameter paramUserName = new SqlParameter("@UserName", SqlDbType.VarChar);
+                paramUserName.Direction = ParameterDirection.Input;
+                paramUserName.Value = userEntity.UserName;
+
+                SqlParameter paramPassword = new SqlParameter("@Password", SqlDbType.VarChar);
+                paramPassword.Direction = ParameterDirection.Input;
+                paramPassword.Value = Crypto.Encrypt(userEntity.Password);
+
+                SqlParameter paramFirstName = new SqlParameter("@FirstName", SqlDbType.VarChar);
+                paramFirstName.Direction = ParameterDirection.Input;
+                paramFirstName.Value = userEntity.FirstName;
+
+                SqlParameter paramLastName = new SqlParameter("@LastName", SqlDbType.VarChar);
+                paramLastName.Direction = ParameterDirection.Input;
+                paramLastName.Value = userEntity.LastName;
+
+                SqlParameter paramDBO = new SqlParameter("@DOB", SqlDbType.DateTime);
+                paramDBO.Direction = ParameterDirection.Input;
+                paramDBO.Value = userEntity.DOB;
+
+                SqlParameter paramEmailAddress = new SqlParameter("@EmailAddress", SqlDbType.VarChar);
+                paramEmailAddress.Direction = ParameterDirection.Input;
+                paramEmailAddress.Value = userEntity.EmailAddress;
+
+                SqlParameter paramAddress = new SqlParameter("@Address", SqlDbType.VarChar);
+                paramAddress.Direction = ParameterDirection.Input;
+                paramAddress.Value = userEntity.Address;
+
+                SqlParameter paramUserId = new SqlParameter("@UserId", SqlDbType.Int);
+                paramUserId.Direction = ParameterDirection.Input;
+                paramUserId.Value = userEntity.UserId;
+
+                SqlHelper.ExecuteNonQuery(Common.FPSConn,CommandType.StoredProcedure, "Sp_UpdateUserDetails", paramUserName, paramPassword, paramFirstName, paramLastName, paramDBO, paramEmailAddress, paramAddress, paramUserId);
+                return Convert.ToInt32(paramUserId.Value);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
     }
 }

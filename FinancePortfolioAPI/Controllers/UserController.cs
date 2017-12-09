@@ -123,5 +123,23 @@ namespace FinancePortfolioAPI.Controllers
                 throw ex;
             }
         }
+
+        [HttpPost()]
+        [ActionName("UpdateUserDetails")]
+        public Int32 UpdateUserDetails([FromBody] User userEntity)
+        {
+            int iUserId = 0;
+            try
+            {
+                UserBL userBL = new UserBL();
+                iUserId = userBL.UpdateUserDetails(userEntity);
+                return iUserId;
+            }
+            catch (Exception ex)
+            {
+                Common.WriteLog(ex);
+                throw ex;
+            }
+        }
     }
 }

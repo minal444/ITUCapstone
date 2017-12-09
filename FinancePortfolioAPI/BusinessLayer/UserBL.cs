@@ -181,5 +181,21 @@ namespace FinancePortfolioAPI.BusinessLayer
             }
         }
 
+        public Int32 UpdateUserDetails(User userEntity)
+        {
+            Int32 iUserId = 0;
+            try
+            {
+                User user = new User();
+                iUserId = UserDL.UpdateUserDetails(userEntity);
+                return iUserId;
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
