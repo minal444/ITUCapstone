@@ -212,7 +212,7 @@ namespace FinancePortfolioAPI.DataLayer
                     AvgVolume = dataRecordLogin.GetString(dataRecordLogin.GetOrdinal("AvgVolume")),
                     MarketCap = dataRecordLogin.GetString(dataRecordLogin.GetOrdinal("MarketCap")),
                     FirstYearTargetEst = dataRecordLogin.GetString(dataRecordLogin.GetOrdinal("FirstYearTargetEst")),
-
+                    LastUpdated = dataRecordLogin.GetString(dataRecordLogin.GetOrdinal("LastUpdated")),
                 };
 
                 return tickerSymbols;

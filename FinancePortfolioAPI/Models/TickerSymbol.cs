@@ -64,6 +64,9 @@ namespace FinancePortfolioAPI.Models
 
         [JsonProperty(PropertyName = "1y Target Est")]
         public string FirstYearTargetEst{ get; set; }
+
+        [JsonProperty(PropertyName = "LastUpdated")]
+        public string LastUpdated { get; set; }
     }
 
     public class TickerSymbolForParser
